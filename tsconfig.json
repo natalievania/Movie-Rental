@@ -1,0 +1,50 @@
+{
+  "compilerOptions": {
+    /* Language and Environment */
+    "lib": ["ES2020", "DOM", "dom.iterable"],
+    "target": "ES2020" /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */,
+    "jsx": "react" /* Specify what JSX code is generated. */,
+    /* Modules */
+    "module": "commonjs" /* Specify what module code is generated. */,
+    "baseUrl": "./" /* Specify the base directory to resolve non-relative module names. */,
+    "paths": {
+      "components/*": ["./src/components/*"],
+      "scss/*": ["./src/scss/*"],
+      "context/*": ["./src/context/*"],
+      "hooks/*": ["./src/hooks/*"],
+      "pages/*": ["./src/pages/*"],
+      "assets/*": ["./public/assets/img/*"],
+      "stories/*": ["./src/stories/*"],
+      "utils/*": ["./src/utils/*"],
+      "oldComponents/*": ["./client/components/*"],
+      "oldPages/*": ["./client/pages/*"],
+      "oldUtils/*": ["./client/utils/*"],
+      "api/*": ["./src/api/*"],
+      "consts/*": ["./src/consts/*"],
+      "client/*": ["./src/client/*"],
+      "src/*": ["./src/*"],
+      "types/*": ["./src/types/*"]
+    } /* Specify a set of entries that re-map imports to additional lookup locations. */,
+
+    /* JavaScript Support */
+    "allowJs": true /* Allow JavaScript files to be a part of your program. Use the `checkJS` option to get errors from these files. */,
+    "outDir": "./build" /* Specify an output folder for all emitted files. */,
+    "esModuleInterop": true /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables `allowSyntheticDefaultImports` for type compatibility. */,
+    "forceConsistentCasingInFileNames": true /* Ensure that casing is correct in imports. */,
+
+    /* Type Checking */
+    "strict": true /* Enable all strict type-checking options. */,
+    "noImplicitAny": false /* Enable error reporting for expressions and declarations with an implied `any` type.. */,
+    /* Completeness */
+    // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
+    "skipLibCheck": true /* Skip type checking all .d.ts files. */
+  },
+  "include": [
+    "./src/**/*.tsx",
+    "./src/**/**/*.tsx",
+    "./src/**/*.js",
+    "./src/**/*.jsx",
+    "./src/**/*.ts"
+  ],
+  "exclude": ["./node_modules", "./build/**/*"]
+}
