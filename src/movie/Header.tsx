@@ -3,10 +3,10 @@ import * as Icons from "heroicons-react";
 import { createSearchParams, useNavigate } from "react-router-dom";
 import ModalCart from "./ModalCart";
 
-const Header = () => {
+const Header = ({ setOpenModal }) => {
   const navigate = useNavigate();
   const [search, setSearch] = useState("");
-  const [isOpen, setOpen] = useState<boolean>(false);
+
   return (
     <>
       <div className="header flex bg-black-800 w-full px-[24px] py-[16px] items-center justify-between flex-3">
@@ -27,6 +27,7 @@ const Header = () => {
               <Icons.Search />
             </div>
             <input
+              id="search-movie"
               type="text"
               onInput={(e: any) => setSearch(e.target.value)}
               onKeyDown={(e: any) =>
@@ -41,7 +42,6 @@ const Header = () => {
                       : undefined,
                 })
               }
-              id="movie-search"
               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               placeholder="Search movie name..."
             />
@@ -50,11 +50,10 @@ const Header = () => {
             className="border border-white p-1 rounded-lg cursor-pointer"
             width={38}
             height={38}
-            onClick={() => setOpen(true)}
+            onClick={() => setOpenModal()}
           />
         </div>
       </div>
-      {isOpen && <ModalCart handleModal={setOpen} />}
     </>
   );
 };

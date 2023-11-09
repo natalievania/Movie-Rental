@@ -1,12 +1,13 @@
 import React from "react";
 
 import ListMovie from "./ListMovie";
-import Header from "./Header";
+import ModalCart from "./ModalCart";
 
-function Home() {
+function Home({ openModal, setOpenModal }) {
   return (
     <div className="wrapper bg-black">
       <ListMovie />
+      {openModal && <ModalCart handleModal={setOpenModal} />}
     </div>
   );
 }

@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Home Page should match elements 1`] = `
+Array [
+  <BrowserRouter>
+    <Context.Provider
+      value={
+        Object {
+          "cart": Array [],
+          "setCart": [Function],
+        }
+      }
+    >
+      <Header />
+      <Routes>
+        <Route
+          element={<Home />}
+          path="/home"
+        />
+        <Route
+          element={<Detail />}
+          path="/detail"
+        />
+      </Routes>
+    </Context.Provider>
+  </BrowserRouter>,
+]
+`;
+
+exports[`Test Home Page should render list movies 1`] = `
+Array [
+  <BrowserRouter>
+    <Context.Provider
+      value={
+        Object {
+          "cart": Array [],
+          "setCart": [Function],
+        }
+      }
+    >
+      <Header />
+      <Routes>
+        <Route
+          element={<Home />}
+          path="/home"
+        />
+        <Route
+          element={<Detail />}
+          path="/detail"
+        />
+      </Routes>
+    </Context.Provider>
+  </BrowserRouter>,
+]
+`;

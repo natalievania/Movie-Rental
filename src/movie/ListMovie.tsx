@@ -25,7 +25,10 @@ const ListMovie = () => {
   }, [usp]);
 
   return (
-    <div className="movie-list px-[24px] flex overflow-x-auto space-x-8">
+    <div
+      className="movie-list px-[24px] flex overflow-x-auto space-x-8"
+      id="movie-list"
+    >
       {isLoading && <Loading />}
       {!isLoading &&
         listFilm?.map((data: any, index) => {
@@ -62,9 +65,12 @@ const ListMovie = () => {
                   {data?.release_date.substring(0, 4)}
                 </p>
                 <span className="border-solid rounded-lg border-2 border-white p-1 text-center text-sm">
-                  MOVIE
+                  IDR 123.000
                 </span>
               </div>
+              <p className="text-sm text-justify line-clamp-3 w-full mt-2">
+                {data?.opening_crawl}
+              </p>
             </div>
           );
         })}
